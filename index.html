@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen 2do parcial</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Lista de tareas</h1>
+    <input type="text" id="inputTask" placeholder="Escribe una tarea"/>
+    <select id="priority">
+        <option value="high">Alta</option>
+        <option value="medium">Media</option>
+        <option value="low">Baja</option>
+    </select>
+    <button type="button" onclick="addTask()">Agregar tarea</button>
+
+    <div class="container"></div>
+
+    <div id='modal' class="obscure hide">
+        <div class="confirmation">
+            <p>¿Estás seguro de que deseas eliminar esta tarea de alta prioridad?</p>
+            <div class="buttons">
+                <button type="button" id="confirm" class="confirm" onclick="deleteTask(true)">Confirmar</button>
+                <button type="button" id="Cancel" class="cancel" onclick="deleteTask(false)">Cancelar</button>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
